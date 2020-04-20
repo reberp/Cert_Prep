@@ -1,0 +1,7 @@
+samba
+smbmap
+smbclient
+smbget
+rpcbind
+nfs
+suid
