@@ -1,0 +1,7 @@
+windows
+powersploit
+powershell
+unquoted service path
+winpeas
+
+

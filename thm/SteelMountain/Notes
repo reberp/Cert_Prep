@@ -1,0 +1,21 @@
+scan
+nothing on dirb
+can't list shares
+rejetto file server on 8080
+find 2014-6287
+use 39161.py
+update script fields and run with listener going. 
+get user
+powershell exists
+use powersploit invoke all or winpeas
+replace
+ServiceName   : AdvancedSystemCareService9
+Path          : C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe
+StartName     : LocalSystem
+AbuseFunction : Write-ServiceBinary -ServiceName 'AdvancedSystemCareService9' 
+                -Path <HijackPath>
+the whole AbuseFunction thing doesn't do what I wanted? 
+make my own exe and upload to C:\Program Files (x86)\IObit\Advanced.exe
+
+Didn't work with x86 encoder like they suggest, x64 did. Maybe messed up at first? 
+
