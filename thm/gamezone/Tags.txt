@@ -1,0 +1,6 @@
+sqli
+sqlmap
+sql injection
+ssh tunneling
+john the ripper
+
