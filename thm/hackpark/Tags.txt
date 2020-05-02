@@ -1,0 +1,5 @@
+hydra
+brute force
+winpeas
+burp
+windows-exploit-suggester
