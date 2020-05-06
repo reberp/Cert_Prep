@@ -1,0 +1,9 @@
+smbmap
+smbclient
+wildcard
+remote file inclusion
+dirb
+gobuster
+hydra
+crontab
+
