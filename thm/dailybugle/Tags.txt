@@ -1,0 +1,6 @@
+sqlmap
+sqli
+gtfobins
+linpeas
+yum
+
