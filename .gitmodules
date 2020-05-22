@@ -4,3 +4,6 @@
 [submodule "tools_scripts/impacket"]
 	path = tools_scripts/impacket
 	url = https://github.com/SecureAuthCorp/impacket
+[submodule "tools_scripts/PayloadsAllTheThings"]
+	path = tools_scripts/PayloadsAllTheThings
+	url = https://github.com/swisskyrepo/PayloadsAllTheThings
