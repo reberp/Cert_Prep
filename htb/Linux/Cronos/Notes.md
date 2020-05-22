@@ -1,4 +1,5 @@
 # Enumerate
+```
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-22 08:00 EDT
 Nmap scan report for 10.10.10.13
 Host is up (0.026s latency).
@@ -22,6 +23,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 37.71 seconds
+```
 
 * Exploits for those:
 22 - probably not, but started hydra anyway with www-data user
