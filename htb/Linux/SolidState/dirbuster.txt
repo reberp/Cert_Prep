@@ -1,0 +1,85 @@
+Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+Starting OWASP DirBuster 1.0-RC1
+Starting dir/file list based brute forcing
+Dir found: /images/ - 200
+Dir found: / - 200
+Dir found: /icons/ - 403
+File found: /index.html - 200
+File found: /services.html - 200
+File found: /about.html - 200
+Dir found: /assets/ - 200
+Dir found: /assets/js/ - 200
+File found: /assets/js/skel.min.js - 200
+File found: /assets/js/jquery.min.js - 200
+May 23, 2020 5:50:30 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: StartTag at (r17,c4,p545) missing required end tag
+May 23, 2020 5:50:30 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: StartTag at (r52,c8,p2045) missing required end tag
+File found: /assets/js/jquery.scrollex.min.js - 200
+File found: /assets/js/util.js - 200
+File found: /assets/js/main.js - 200
+Dir found: /assets/css/ - 200
+Dir found: /assets/fonts/ - 200
+Dir found: /assets/sass/ - 200
+Dir found: /assets/js/ie/ - 200
+File found: /assets/css/font-awesome.min.css - 200
+File found: /assets/css/ie8.css - 200
+File found: /assets/fonts/FontAwesome.otf - 200
+Dir found: /assets/sass/base/ - 200
+File found: /assets/js/ie/PIE.htc - 200
+May 23, 2020 5:50:33 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: StartTag !-- at (r16,c403,p968) not recognised as type 'comment' because it has no closing delimiter
+May 23, 2020 5:50:33 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: Encountered possible StartTag at (r16,c403,p968) whose content does not match a registered StartTagType
+May 23, 2020 5:50:33 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: StartTag a at (r92,c175,p39558) rejected because the name contains an invalid character at position (r92,c177,p39560)
+May 23, 2020 5:50:33 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: Encountered possible StartTag at (r92,c175,p39558) whose content does not match a registered StartTagType
+May 23, 2020 5:50:33 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: StartTag a at (r92,c201,p39584) rejected because the name contains an invalid character at position (r92,c203,p39586)
+May 23, 2020 5:50:33 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: Encountered possible StartTag at (r92,c201,p39584) whose content does not match a registered StartTagType
+May 23, 2020 5:50:33 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: StartTag a at (r93,c295,p40190) rejected because the name contains an invalid character at position (r93,c297,p40192)
+May 23, 2020 5:50:33 PM au.id.jericho.lib.html.LoggerProviderJava$JavaLogger info
+INFO: Encountered possible StartTag at (r93,c295,p40190) whose content does not match a registered StartTagType
+File found: /assets/css/ie9.css - 200
+File found: /assets/js/ie/backgroundsize.min.htc - 200
+File found: /assets/fonts/fontawesome-webfont.eot - 200
+Dir found: /assets/sass/components/ - 200
+Dir found: /assets/css/images/ - 200
+File found: /assets/js/ie/html5shiv.js - 200
+File found: /assets/sass/ie8.scss - 200
+File found: /assets/js/ie/respond.min.js - 200
+File found: /assets/sass/ie9.scss - 200
+File found: /assets/css/main.css - 200
+File found: /assets/fonts/fontawesome-webfont.ttf - 200
+File found: /assets/fonts/fontawesome-webfont.svg - 200
+Dir found: /assets/sass/layout/ - 200
+File found: /assets/fonts/fontawesome-webfont.woff - 200
+Dir found: /assets/sass/libs/ - 200
+File found: /assets/fonts/fontawesome-webfont.woff2 - 200
+File found: /assets/sass/main.scss - 200
+File found: /assets/sass/base/_page.scss - 200
+File found: /assets/sass/base/_typography.scss - 200
+File found: /assets/css/images/close.svg - 200
+File found: /assets/sass/components/_box.scss - 200
+File found: /assets/sass/components/_button.scss - 200
+File found: /assets/sass/components/_features.scss - 200
+File found: /assets/sass/components/_form.scss - 200
+File found: /assets/sass/layout/_banner.scss - 200
+File found: /assets/sass/components/_icon.scss - 200
+File found: /assets/sass/libs/_functions.scss - 200
+File found: /assets/sass/layout/_footer.scss - 200
+File found: /assets/sass/libs/_mixins.scss - 200
+File found: /assets/sass/components/_image.scss - 200
+File found: /assets/sass/layout/_header.scss - 200
+File found: /assets/sass/components/_list.scss - 200
+File found: /assets/sass/libs/_skel.scss - 200
+File found: /assets/sass/layout/_menu.scss - 200
+File found: /assets/sass/components/_section.scss - 200
+File found: /assets/sass/libs/_vars.scss - 200
+File found: /assets/sass/layout/_wrapper.scss - 200
+File found: /assets/sass/components/_table.scss - 200
+File found: /README.txt - 200
+File found: /LICENSE.txt - 200
