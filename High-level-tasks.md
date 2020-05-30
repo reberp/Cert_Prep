@@ -2,8 +2,9 @@
 
 ## Scan
 
-* [ ] nmap -p- \<HOST\> 
+* [ ] nmap -p- \<HOST\> --max-retries 5
   * [ ] For open ports: nmap -sC -sV -o nmap_scan.txt -O -p \<PORTS\> \<HOST\>  
+  * [ ] Taking too long? lower max-retries toward 0 
 
 ## Enumerate Services
 
