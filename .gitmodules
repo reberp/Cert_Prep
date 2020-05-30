@@ -19,3 +19,6 @@
 [submodule "tools_scripts/WinEnum"]
 	path = tools_scripts/WinEnum
 	url = https://github.com/mattiareggiani/WinEnum
+[submodule "tools_scripts/nishang"]
+	path = tools_scripts/nishang
+	url = https://github.com/samratashok/nishang

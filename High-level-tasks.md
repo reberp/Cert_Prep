@@ -8,13 +8,13 @@
 ## Enumerate Services
 
 * [ ] web:
-  * [ ] dirb/dirbuster/gobuster (with .php/txt/js/sh)
+  * [ ] dirb/dirbuster/gobuster (with .php/txt/js/sh/pl)
   * [ ] nikto
   * [ ] Stuck?: 
     * [ ] dotdotpwn
-* [ ] Form?
-  * [ ] sqlmap 
-  * [ ] payloadsallthethings
+  * [ ] Form:
+    * [ ] sqlmap 
+    * [ ] payloadsallthethings
 * [ ] Stuck?:
   * [ ] hydra on any login
 * [ ] grab tool rec from excel for service (e.x. smbclient for smb)
