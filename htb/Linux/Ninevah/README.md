@@ -65,7 +65,7 @@
   [ ] PHPLiteAdmin 1.9.3 - Remote PHP Code Injection  exploits/php/webapps/24044.txt
   [X] phpLiteAdmin - 'table' SQL Injection            exploits/php/webapps/38228.txt
   [X] phpLiteAdmin 1.9.6 - Multiple Vulnerabilities   exploits/php/webapps/39714.txt
-```
+  ```
   
   * /secure_notes/ - just a picture, running dibuster on it. found nothing. 
 
