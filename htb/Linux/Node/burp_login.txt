@@ -1,0 +1,12 @@
+POST /api/session/authenticate HTTP/1.1
+Host: 10.10.10.58:3000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.10.10.58:3000/login
+Content-Type: application/json;charset=utf-8
+Content-Length: 37
+Connection: close
+
+{"username":"asdf","password":"asdf"}
