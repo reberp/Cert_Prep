@@ -8,3 +8,4 @@ git clone https://github.com/rebootuser/LinEnum
 git clone https://github.com/mattiareggiani/WinEnum
 git clone https://github.com/samratashok/nishang
 git clone https://github.com/FortyNorthSecurity/EyeWitness.git
+git clone https://github.com/kavishgr/xmlrpc-bruteforcer

@@ -1,0 +1,23 @@
+Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+Starting OWASP DirBuster 1.0-RC1
+Starting dir/file list based brute forcing
+File found: /webservices/monstra-3.0.4/index.php - 200
+Dir found: /webservices/monstra-3.0.4/ - 200
+File found: /webservices/monstra-3.0.4/rss.php - 200
+Dir found: / - 200
+Dir found: /webservices/ - 403
+File found: /webservices/monstra-3.0.4 - 301
+File found: /webservices/monstra-3.0.4/admin - 301
+Dir found: /webservices/monstra-3.0.4/admin/ - 200
+File found: /webservices/monstra-3.0.4/admin/index.php - 200
+Dir found: /webservices/monstra-3.0.4/tmp/ - 403
+Dir found: /webservices/monstra-3.0.4/tmp/minify/ - 403
+File found: /webservices/monstra-3.0.4/tmp/minify/frontend_site.minify.1.js - 200
+Dir found: /webservices/monstra-3.0.4/public/ - 403
+Dir found: /webservices/monstra-3.0.4/storage/ - 403
+Dir found: /webservices/monstra-3.0.4/plugins/ - 403
+Dir found: /webservices/monstra-3.0.4/engine/ - 403
+Dir found: /webservices/monstra-3.0.4/libraries/ - 403
+File found: /webservices/monstra-3.0.4/robots.txt - 200
+Dir found: /webservices/monstra-3.0.4/boot/ - 403
+Dir found: /webservices/monstra-3.0.4/backups/ - 403
