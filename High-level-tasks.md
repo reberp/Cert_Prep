@@ -13,6 +13,7 @@
   * [ ] nikto
   * [ ] Stuck?: 
     * [ ] dotdotpwn
+    * [ ] Eyewitness? Haven't tried yet
   * [ ] Form:
     * [ ] sqlmap 
     * [ ] payloadsallthethings
@@ -36,9 +37,12 @@ Just do it
 ### Linux
 
 * [ ] Search dirs: /opt/, /usr/local
-* [ ] cat /etc/crontab
-* [ ] sudo -l
-* [ ] netstat -lp
+* [ ] cat /etc/crontab, may be repeating functionality elsewhere still. 
+* [ ] sudo -l, can I run anything as root?
+* [ ] netstat -lp, find localhost listeners
+* [ ] find /bin -perm -4000 or find / -xdev -user root \( -perm -4000 -o -perm -2000 \)
+  * [ ] gtfobins for any standard and unexpected binaries
+  * [ ] test any non-standard scripts/binaries. L/Strace as necessary. 
 * [ ] Enumeration tool
 
 ### Win
