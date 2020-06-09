@@ -1,0 +1,29 @@
+# Nmap 7.80 scan initiated Tue Jun  9 14:48:20 2020 as: nmap -sC -sV -Pn -p 139,445,3389 -oN nmap_sc_sv_10.10.10.4.txt 10.10.10.4
+Nmap scan report for 10.10.10.4
+Host is up (0.026s latency).
+
+PORT     STATE  SERVICE       VERSION
+139/tcp  open   netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open   microsoft-ds  Windows XP microsoft-ds
+3389/tcp closed ms-wbt-server
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: -4h26m04s, deviation: 2h07m16s, median: -5h56m04s
+|_nbstat: NetBIOS name: LEGACY, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:b9:ba:b6 (VMware)
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: legacy
+|   NetBIOS computer name: LEGACY\x00
+|   Workgroup: HTB\x00
+|_  System time: 2020-06-09T18:52:36+03:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jun  9 14:49:31 2020 -- 1 IP address (1 host up) scanned in 70.67 seconds

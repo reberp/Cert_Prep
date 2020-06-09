@@ -6,11 +6,11 @@
 # Functions
 
 scan() {
-  ports=$(nmap $1 --max-retries=3 | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
+  ports=$(nmap $1 --max-retries=3 -Pn | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
   echo "=================================="
   echo "Found ports: $ports"
   echo "=================================="
-  nmap -sC -sV -p $ports $1 -oN nmap_sc_sv_$1.txt
+  nmap -sC -sV -Pn -p $ports $1 -oN nmap_sc_sv_$1.txt
 }
 
 tcpall () {
