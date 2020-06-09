@@ -19,7 +19,8 @@ udpall () {
 
 dirbust () {
   echo "check box for blank extensions"
-  dirbuster -u http://$1:$2/ -e txt,php,js,sh,pl -l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 1>/dev/null 2>/dev/null &
+  time=`date +"%m/%d/%Y_%H:%M"`
+  dirbuster -u http://$1:$2/ -e txt,php,js,sh,pl -l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -r $PWD/dirbuster_$1:$2_$time.txt 1>/dev/null 2>/dev/null &
 }
 
 # Docker comfort

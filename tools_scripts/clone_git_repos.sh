@@ -12,4 +12,5 @@ git clone https://github.com/kavishgr/xmlrpc-bruteforcer
 git clone https://github.com/DominicBreuker/pspy.git
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 > pspy/pspy32
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64 > pspy/pspy64
-echo "Check if pspy32 and 64 and most current version (downloaded v1.2.0)"
+echo "Downloaded v1.2.0 of pspy32/64. Check if most recent version"
+git clone https://github.com/michenriksen/aquatone

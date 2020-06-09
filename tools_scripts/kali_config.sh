@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "source /home/pat/Desktop/Cert_Prep/tools_scripts/bashrc" >> ~/.bashrc
+
 # Things that I added to kali and should remember to install if I start over
 sudo apt install seclists -y
 sudo ln -n -s /usr/share/seclists /usr/share/wordlists/seclists #might not be right but I'm going to forget about this otherwise. 
