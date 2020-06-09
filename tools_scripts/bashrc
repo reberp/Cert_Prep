@@ -10,7 +10,8 @@ scan() {
   echo "=================================="
   echo "Found ports: $ports"
   echo "=================================="
-  nmap -sC -sV -Pn -p $ports $1 -oN nmap_sc_sv_$1.txt
+  time=`date +"%m:%d:%Y_%H:%M"`
+  nmap -sC -sV -Pn -p $ports $1 -oN nmap_$1_$time.txt
 }
 
 tcpall () {
@@ -22,8 +23,13 @@ udpall () {
 
 dirbust () {
   echo "check box for blank extensions"
-  time=`date +"%m/%d/%Y_%H:%M"`
+  time=`date +"%m:%d:%Y_%H:%M"`
   dirbuster -u http://$1:$2/ -e txt,php,js,sh,pl -l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -r $PWD/dirbuster_$1:$2_$time.txt 1>/dev/null 2>/dev/null &
+  # for some reason it doesn't let me change the threads or the blank extension check.
+}
+
+saveDiff () {
+  diff $1 $1.orig --suppress-common-lines > $1_differences.txt
 }
 
 # Docker comfort
@@ -36,14 +42,19 @@ alias arjun='docker run -it arjun '
 
 # Tools
 
-alias eyewitness='python3 /home/kali/tools/EyeWitness/EyeWitness.py'
+#alias eyewitness='python3 /home/kali/tools/EyeWitness/EyeWitness.py'
+alias john='/sbin/john'
+alias route='/sbin/route'
+alias ifconfig='/sbin/ifconfig'
+alias ssp='searchsploit'
 
 # Conveniance
 
 alias infile='echo "2>&1 | tee"'
 alias ll='ls -lah --color=auto'
-alias serveFiles='python -m SimpleHTTPServer 80'
-alias explore='nautilus .'
+alias serveFiles='sudo python -m SimpleHTTPServer 80'
+#alias explore='nautilus .'
+alias folder='nautilus . 2>/dev/null 1>/dev/null &'
 alias enable_monitor='sudo ifconfig wlan0 down && iwconfig wlan0 mode Monitor && ifconfig wlan0 up'
 alias sservice='sudo service --status-all'
 alias startapache2='sudo service apache2 start'
@@ -61,6 +72,7 @@ alias ~='cd ~'
 alias ...='cd .. & cd ..'
 alias bashrc='nano ~/.bashrc'
 alias h='history'
+alias hfind='history | grep'
 alias ports='netstat -tulanp'
 alias e='exit'
 alias chx='chmod +x'
@@ -79,22 +91,22 @@ done;
 ###   Handy Extract Program
 
 extract () {
-    if [ -f \$1 ] ; then
-        case \$1 in
-            *.tar.bz2)   tar xvjf \$1        ;;
-            *.tar.gz)    tar xvzf \$1     ;;
-            *.bz2)       bunzip2 \$1       ;;
-            *.rar)       unrar x \$1     ;;
-            *.gz)        gunzip \$1     ;;
-            *.tar)       tar xvf \$1        ;;
-            *.tbz2)      tar xvjf \$1      ;;
-            *.tgz)       tar xvzf \$1       ;;
-            *.zip)       unzip \$1     ;;
-            *.Z)         uncompress \$1  ;;
-            *.7z)        7z x \$1    ;;
-            *)           echo \"'\$1' cannot be extracted via >extract<\" ;;
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1        ;;
+            *.tar.gz)    tar xvzf $1     ;;
+            *.bz2)       bunzip2 $1       ;;
+            *.rar)       unrar x $1     ;;
+            *.gz)        gunzip $1     ;;
+            *.tar)       tar xvf $1        ;;
+            *.tbz2)      tar xvjf $1      ;;
+            *.tgz)       tar xvzf $1       ;;
+            *.zip)       unzip $1     ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1    ;;
+            *)           echo \"'$1' cannot be extracted via >extract<\" ;;
         esac
     else
-        echo \"'\$1' is not a valid file\"
+        echo \"'$1' is not a valid file\"
     fi
 }

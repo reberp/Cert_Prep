@@ -12,3 +12,5 @@ wget http://pentestmonkey.net/tools/php-reverse-shell/php-reverse-shell-1.0.tar.
 sudo gem install wpscan #might have to do this https://github.com/BBC-News/wraith/issues/526
 
 sudo echo "Go to ur /etc/samba/smb.conf file and add the  following, client min protocol = NT1. Under the global section. Solve maybe smbclient protocol errors. "
+
+sudo apt install nautilus -y

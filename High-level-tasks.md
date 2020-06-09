@@ -32,6 +32,8 @@ Just do it
 
 # Escalate
 
+* [ ] Meterpreter: post/multi/recon/local_exploit_suggester
+
 ## Enumerate Machine
 
 ### Linux

