@@ -1,0 +1,96 @@
+# Took from this dude and made some changes:
+# https://gist.githubusercontent.com/AvasDream/5f8104c8ae9641750fbd04311bd84213/raw/56b2b40d801042e4fad1d5cc5b07df3b426ecf47/bashrc
+
+# Own stuff
+
+# Functions
+
+scan() {
+  ports=$(nmap $1 --max-retries=3 | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
+  nmap -sC -sV -p $ports $1 -oN nmap_sc_sv.txt
+}
+
+tcpall () {
+  nmap -sV -sC -p- -oN $1_tcp_all.txt $1
+}
+udpall () {
+  sudo nmap -sV -sC -sU -oN $1_tcp_all.txt $1
+}
+
+dirbust () {
+  echo "check box for blank extensions"
+  dirbuster -u http://$1:$2/ -e txt,php,js,sh,pl -l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 1>/dev/null 2>/dev/null &
+}
+
+# Docker comfort
+alias docker='sudo docker'
+alias aiodns='sudo docker run --rm -it aiodns -r dns_resolver.txt -w subdomain_list.txt -t 8 --output json '
+alias sublister='sudo docker run -it sublister -d '
+alias parameth='sudo docker run -it parameth'
+alias hakrawler='sudo docker run -it hakrawler '
+alias arjun='docker run -it arjun '
+
+# Tools
+
+alias eyewitness='python3 /home/kali/tools/EyeWitness/EyeWitness.py'
+
+# Conveniance
+
+alias infile='echo "2>&1 | tee"'
+alias ll='ls -lah --color=auto'
+alias serveFiles='python -m SimpleHTTPServer 80'
+alias explore='nautilus .'
+alias enable_monitor='sudo ifconfig wlan0 down && iwconfig wlan0 mode Monitor && ifconfig wlan0 up'
+alias sservice='sudo service --status-all'
+alias startapache2='sudo service apache2 start'
+alias stopapache2='sudo service apache2 stop'
+alias startmysql='sudo service mysql start'
+alias stopmysql='sudo service mysql stop'
+alias lanip6='sudo ifconfig eth0 | grep inet6 | grep 128 | awk '\''{print $2}'\'''
+alias lanip4='sudo ifconfig eth0 | grep inet | grep netmask | awk '\''{print $2}'\'''
+alias wanip='echo $(curl -s https://api.ipify.org)'
+alias wanip6='echo $(curl -s https://api6.ipify.org)'
+alias aurevoir='shutdown -h now'
+alias c='clear'
+alias ..='cd ..'
+alias ~='cd ~'
+alias ...='cd .. & cd ..'
+alias bashrc='nano ~/.bashrc'
+alias h='history'
+alias ports='netstat -tulanp'
+alias e='exit'
+alias chx='chmod +x'
+
+# Variables
+server='/var/www/html'
+
+# Functions
+loop() {
+while true;
+do $1;
+sleep $2;
+done;
+}
+
+###   Handy Extract Program
+
+extract () {
+    if [ -f \$1 ] ; then
+        case \$1 in
+            *.tar.bz2)   tar xvjf \$1        ;;
+            *.tar.gz)    tar xvzf \$1     ;;
+            *.bz2)       bunzip2 \$1       ;;
+            *.rar)       unrar x \$1     ;;
+            *.gz)        gunzip \$1     ;;
+            *.tar)       tar xvf \$1        ;;
+            *.tbz2)      tar xvjf \$1      ;;
+            *.tgz)       tar xvzf \$1       ;;
+            *.zip)       unzip \$1     ;;
+            *.Z)         uncompress \$1  ;;
+            *.7z)        7z x \$1    ;;
+            *)           echo \"'\$1' cannot be extracted via >extract<\" ;;
+        esac
+    else
+        echo \"'\$1' is not a valid file\"
+    fi
+}
