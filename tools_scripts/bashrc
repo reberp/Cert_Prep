@@ -7,7 +7,10 @@
 
 scan() {
   ports=$(nmap $1 --max-retries=3 | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
-  nmap -sC -sV -p $ports $1 -oN nmap_sc_sv.txt
+  echo "=================================="
+  echo "Found ports: $ports"
+  echo "=================================="
+  nmap -sC -sV -p $ports $1 -oN nmap_sc_sv_$1.txt
 }
 
 tcpall () {
