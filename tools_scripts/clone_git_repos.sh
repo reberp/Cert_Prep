@@ -14,3 +14,4 @@ wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 > ps
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64 > pspy/pspy64
 echo "Downloaded v1.2.0 of pspy32/64. Check if most recent version"
 git clone https://github.com/michenriksen/aquatone
+git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester

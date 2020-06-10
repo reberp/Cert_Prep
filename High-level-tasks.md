@@ -50,4 +50,4 @@ Just do it
 ### Win
 
 * [ ] Enumeration tool
-
+* [ ] systeminfo -> windows-exploit-suggester

@@ -1,0 +1,38 @@
+DirBuster 1.0-RC1 - Report
+http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+Report produced on Wed Jun 10 07:16:26 EDT 2020
+--------------------------------
+
+http://10.10.10.8:80
+--------------------------------
+Directories found during testing:
+
+Dirs found with a 200 response:
+
+/
+/creampie/
+
+
+--------------------------------
+Files found during testing:
+
+Files found with a 401 responce:
+
+/~login
+
+Files found with a 200 responce:
+
+/~img10
+/~img27
+/~img8
+/~img1
+/~img3
+/~img15
+/~img18
+/~img0
+/directions.txt
+/directions.pl
+/creampie.sh
+
+
+--------------------------------
