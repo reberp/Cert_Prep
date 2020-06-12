@@ -5,6 +5,8 @@
 
 # Functions
 
+# Use declare -f <function_name> to print it on the console
+
 scan() {
   ports=$(nmap $1 --max-retries=3 -Pn | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
   echo "=================================="
@@ -43,6 +45,7 @@ alias arjun='docker run -it arjun '
 # Tools
 
 #alias eyewitness='python3 /home/kali/tools/EyeWitness/EyeWitness.py'
+alias tcpdump='/sbin/tcpdump'
 alias john='/sbin/john'
 alias route='/sbin/route'
 alias ifconfig='/sbin/ifconfig'

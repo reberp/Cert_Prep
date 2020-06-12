@@ -1,0 +1,31 @@
+DirBuster 1.0-RC1 - Report
+http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+Report produced on Thu Jun 11 18:32:29 EDT 2020
+--------------------------------
+
+http://10.10.10.15:80
+--------------------------------
+Directories found during testing:
+
+Dirs found with a 200 response:
+
+/
+/images/
+/Images/
+/IMAGES/
+/_private/
+/%5Fprivate/
+
+
+--------------------------------
+Files found during testing:
+
+Files found with a 301 responce:
+
+/images
+/Images
+/IMAGES
+/_private
+
+
+--------------------------------
