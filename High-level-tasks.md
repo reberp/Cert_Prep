@@ -52,3 +52,4 @@ Just do it
 
 * [ ] Enumeration tool
 * [ ] systeminfo -> windows-exploit-suggester
+* [ ] PowerUp
