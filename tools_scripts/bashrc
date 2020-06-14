@@ -13,7 +13,7 @@ scan() {
   echo "Found ports: $ports"
   echo "=================================="
   time=`date +"%m:%d:%Y_%H:%M"`
-  nmap -sC -sV -Pn -p $ports $1 -oN nmap_$1_$time.txt
+  sudo nmap -sC -sV -Pn -O -p $ports $1 -oN nmap_$1_$time.txt
 }
 
 tcpall () {
