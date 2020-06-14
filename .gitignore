@@ -1,2 +1,3 @@
 /tools_scripts/**/
 /tools_scripts/*.tar.gz
+**.exe
