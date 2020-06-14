@@ -2,29 +2,29 @@
 
 ## Scan
 
-* [ ] nmap -p- \<HOST\> --max-retries 5
-  * [ ] For open ports: nmap -sC -sV -o nmap_scan.txt -O -p \<PORTS\> \<HOST\>  
-  * [ ] Taking too long? lower max-retries toward 0 
+* [ ] scan <ip> #see bashrc
 
 ## Enumerate Services
 
 * [ ] web:
-  * [ ] dirb/dirbuster/gobuster (with .php/txt/js/sh/pl)
+  * [ ] dirbust <ip> #see bashrc
   * [ ] nikto
   * [ ] Stuck?: 
     * [ ] dotdotpwn
     * [ ] Eyewitness? Haven't tried yet
   * [ ] Form:
     * [ ] sqlmap 
-    * [ ] payloadsallthethings
+    * [ ] payloadsallthethings #or other injection cheatsheets
 * [ ] Stuck?:
   * [ ] hydra on any login
 * [ ] grab tool rec from excel for service (e.x. smbclient for smb)
 
 ## Find Exploits
 
-* [ ] searchsploit for open ports/services
 * [ ] web search for exploits or default logins for open ports/services
+* [ ] searchsploit for open ports/services
+  * [ ] compiled or pre-made? https://github.com/offensive-security/exploitdb-bin-sploits
+  * [ ] web search for exploits to find scripts
 
 # Access
 
@@ -40,6 +40,7 @@ Just do it
 
 * [ ] Search dirs: /opt/, /usr/local
 * [ ] cat /etc/crontab, may be repeating functionality elsewhere still. 
+  * [ ] pspy to try and see additional recurring processes 
 * [ ] sudo -l, can I run anything as root?
 * [ ] netstat -lp, find localhost listeners
 * [ ] find /bin -perm -4000 or find / -xdev -user root \( -perm -4000 -o -perm -2000 \)
