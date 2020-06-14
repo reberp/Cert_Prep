@@ -7,6 +7,19 @@
 
 # Use declare -f <function_name> to print it on the console
 
+waitforreset() {
+  while :
+    do
+        pingres=$(ping -c 5 -i .2 $1)
+        if [[ $pingres == *"100% packet loss"* ]]; then
+                echo "it's off"
+                break
+        else echo "still on"
+        fi
+        sleep 1
+    done
+}
+
 scan() {
   ports=$(nmap $1 --max-retries=3 -Pn | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
   echo "=================================="

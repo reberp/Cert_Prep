@@ -110,4 +110,4 @@ Chimichurri.exe: HTML document, UTF-8 Unicode text, with very long lines
 # Lessons
 
 * trying to find dirs in an app? Maybe there's a custom wordlist for it. 
-
+* the exploit suggester returns different results after migrating to a 64 bit version of meterpreter. 
