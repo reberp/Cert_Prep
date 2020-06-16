@@ -18,3 +18,5 @@ git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester
 git clone https://github.com/trustedsec/unicorn
 git clone https://github.com/rasta-mouse/Watson
 git clone https://github.com/rasta-mouse/Sherlock
+git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
+git clone https://github.com/pentestmonkey/finger-user-enum

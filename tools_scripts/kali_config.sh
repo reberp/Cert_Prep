@@ -16,5 +16,6 @@ echo "Downloaded aquatone 1.7.0, newer version?"
 # Alternatively, it's probably easier to just curl https://github.com/michenriksen/aquatone/releases/latest | grep <version>
 sudo apt install nautilus -y
 
-echo "Go to ur /etc/samba/smb.conf file and add the  following, client min protocol = NT1. Under the global section. Solve maybe smbclient protocol errors. "
+echo "Go to ur /etc/samba/smb.conf file and add the  following, client min protocol = NT1. Under the global section. Think this solves smbclient protocol errors. "
 
+sudo gem install evil-winrm

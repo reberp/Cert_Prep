@@ -18,9 +18,11 @@ HackTheBox notes and related files
 * [Windows](Windows/)
   * [Arctic](Windows/Arctic/)
   * [Blue](Windows/Blue/)
+  * [Grandpa](Windows/Grandpa/)
   * [Granny](Windows/Granny/)
   * [Legacy](Windows/Legacy/)
   * [Optimum](Windows/Optimum/)
+  * [Jerry](Windows/Jerry/)
 
 Machines to try: 
 
