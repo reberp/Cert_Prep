@@ -34,6 +34,10 @@ Just do it
 
 * [ ] Meterpreter: post/multi/recon/local_exploit_suggester
 
+## Persist
+
+* [ ] Get another shell if it's hard to re-create or a service might crash. 
+
 ## Enumerate Machine
 
 ### Linux
@@ -50,6 +54,6 @@ Just do it
 
 ### Win
 
-* [ ] Enumeration tool
+* [ ] Enumeration tool (winpeas, etc.)
 * [ ] systeminfo -> windows-exploit-suggester
 * [ ] PowerUp

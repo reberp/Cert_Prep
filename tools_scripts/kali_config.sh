@@ -19,3 +19,8 @@ sudo apt install nautilus -y
 echo "Go to ur /etc/samba/smb.conf file and add the  following, client min protocol = NT1. Under the global section. Think this solves smbclient protocol errors. "
 
 sudo gem install evil-winrm
+
+#Copy wanted files from my fork of this repo. 
+wget https://raw.githubusercontent.com/reberp/OSCP-PwK/master/win-inventory.bat
+wget https://raw.githubusercontent.com/reberp/OSCP-PwK/master/check-exploits.py
+wget https://raw.githubusercontent.com/reberp/OSCP-PwK/master/linux-local-enum.sh

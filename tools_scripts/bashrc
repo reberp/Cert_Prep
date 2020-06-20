@@ -21,7 +21,7 @@ waitforreset() {
 }
 
 scan() {
-  ports=$(nmap $1 --max-retries=3 -Pn | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
+  ports=$(nmap $1 -v10 --max-retries=3 -Pn -p- 2>&1 | tee /dev/tty | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
   echo "=================================="
   echo "Found ports: $ports"
   echo "=================================="
@@ -57,14 +57,14 @@ alias arjun='docker run -it arjun '
 
 # Tools
 
-#alias eyewitness='python3 /home/kali/tools/EyeWitness/EyeWitness.py'
-alias tcpdump='/sbin/tcpdump'
+alias eyewitness='/home/pat/Desktop/Cert_Prep/tools_scripts/Remote_Enum_Exploit/EyeWitness/Python/EyeWitness.py' 
+alias tcpdump='/sbin/tcpdump' # should I just add sbin to my path? No, its Kali thats wrong.
 alias john='/sbin/john'
 alias route='/sbin/route'
 alias ifconfig='/sbin/ifconfig'
 alias ssp='searchsploit'
 
-# Conveniance
+# Convenience
 
 alias infile='echo "2>&1 | tee"'
 alias ll='ls -lah --color=auto'
