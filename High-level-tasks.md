@@ -24,6 +24,7 @@
 * [ ] web search for exploits or default logins for open ports/services
 * [ ] searchsploit for open ports/services
   * [ ] compiled or pre-made? https://github.com/offensive-security/exploitdb-bin-sploits
+  * [ ] some precompiled sorted by MS-XXX: https://github.com/SecWiki/windows-kernel-exploits
   * [ ] web search for exploits to find scripts
 
 # Access
@@ -51,9 +52,11 @@ Just do it
   * [ ] gtfobins for any standard and unexpected binaries
   * [ ] test any non-standard scripts/binaries. L/Strace as necessary. 
 * [ ] Enumeration tool
+* [ ] pspy - anything usual showing up? 
 
 ### Win
 
-* [ ] Enumeration tool (winpeas, etc.)
+* [ ] Enumeration tool (winpeas, Seatbelt, JAWS, etc.)
 * [ ] systeminfo -> windows-exploit-suggester
 * [ ] PowerUp
+* [ ] Check Program files and x86, anything unusual installed? 

@@ -21,7 +21,7 @@ waitforreset() {
 }
 
 scan() {
-  ports=$(nmap $1 -v10 --max-retries=3 -Pn -p- 2>&1 | tee /dev/tty | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
+  ports=$(nmap $1 -v10 --max-retries=1 -Pn -p- 2>&1 | tee /dev/tty | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
   echo "=================================="
   echo "Found ports: $ports"
   echo "=================================="

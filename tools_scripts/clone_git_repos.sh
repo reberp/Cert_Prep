@@ -20,3 +20,4 @@ git clone https://github.com/rasta-mouse/Watson
 git clone https://github.com/rasta-mouse/Sherlock
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
 git clone https://github.com/pentestmonkey/finger-user-enum
+git clone https://github.com/411Hall/JAWS.git
