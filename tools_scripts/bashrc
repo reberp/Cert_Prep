@@ -18,6 +18,18 @@ waitforreset() {
         fi
         sleep 1
     done
+  sleep 5
+  while :
+    do
+        pingres=$(ping -c 5 -i .2 $1)
+        if [[ $pingres == *"100% packet loss"* ]]; then
+                continue
+        else
+          echo "It's back"
+          break
+        fi
+        sleep 1
+    done
 }
 
 scan() {
@@ -39,7 +51,7 @@ udpall () {
 dirbust () {
   echo "check box for blank extensions"
   time=`date +"%m:%d:%Y_%H:%M"`
-  dirbuster -u http://$1:$2/ -e txt,php,js,sh,pl -l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -r $PWD/dirbuster_$1:$2_$time.txt 1>/dev/null 2>/dev/null &
+  dirbuster -u http://$1:$2/ -e txt,php,js,sh,pl,xml -l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -r $PWD/dirbuster_$1:$2_$time.txt 1>/dev/null 2>/dev/null &
   # for some reason it doesn't let me change the threads or the blank extension check.
 }
 

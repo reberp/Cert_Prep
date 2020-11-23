@@ -23,6 +23,7 @@ HackTheBox notes and related files
   * [Legacy](Windows/Legacy/)
   * [Optimum](Windows/Optimum/)
   * [Jerry](Windows/Jerry/)
+  * [Buff](Windows/Buff/)
 
 Machines to try: 
 
