@@ -1,3 +1,4 @@
+I guess I'm unfortunately not getting into a position where any of this knowledge matters unfortunately. Maybe I'll bother later. Probably not.  
 Spot for putting things and notes while I'm learning hackthebox and tryhackme solutions for OSCP.
 I'll eventually do genuine writeups maybe. Separate excel and word doc for more notes I'll clean and put in eventually. 
 
