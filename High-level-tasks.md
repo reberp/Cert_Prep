@@ -3,20 +3,20 @@
 ## Scan
 
 * [ ] scan <ip> #see bashrc
+* [ ] reconscan.py
 
 ## Enumerate Services
 
 * [ ] web:
   * [ ] dirbust <ip> #see bashrc
   * [ ] nikto
-  * [ ] Stuck?: 
-    * [ ] dotdotpwn
-    * [ ] Eyewitness? Haven't tried yet
+  * [ ] Read source
+  * [ ] dotdotpwn
+  * [ ] specific web framework scan? 
   * [ ] Form:
     * [ ] sqlmap 
     * [ ] payloadsallthethings #or other injection cheatsheets
-* [ ] Stuck?:
-  * [ ] hydra on any login
+* [ ] hydra on any login
 * [ ] grab tool rec from excel for service (e.x. smbclient for smb)
 
 ## Find Exploits

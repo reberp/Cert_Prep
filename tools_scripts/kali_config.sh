@@ -2,6 +2,8 @@
 
 echo "source $PWD/bashrc" >> ~/.bashrc
 
+# misc
+sudo apt-get install -y software-properties-common 
 
 # Things that I added to kali and should remember to install if I start over
 sudo apt install seclists -y
