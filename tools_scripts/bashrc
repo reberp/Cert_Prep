@@ -59,6 +59,14 @@ saveDiff () {
   diff $1 $1.orig --suppress-common-lines > $1_differences.txt
 }
 
+encrypt () {
+  openssl aes-256-cbc --pbkdf2 -in $1 -out $2
+}
+
+decrypt () {
+  openssl aes-256-cbc --pbkdf2 -d -in $1 -out $2
+}
+
 # Docker comfort
 alias docker='sudo docker'
 alias aiodns='sudo docker run --rm -it aiodns -r dns_resolver.txt -w subdomain_list.txt -t 8 --output json '
