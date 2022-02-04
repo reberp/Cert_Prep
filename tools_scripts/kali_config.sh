@@ -17,6 +17,11 @@ echo "Downloaded aquatone 1.7.0, newer version?"
 # I'm not going to bother diving into the github api, but should be some way to ask for latest releast.
 # Alternatively, it's probably easier to just curl https://github.com/michenriksen/aquatone/releases/latest | grep <version>
 sudo apt install nautilus -y
+sudo apt-get install android-tools-adb
+sudo apt-get install sqlninja -y 
+sudo apt-get install nodejs -y
+sudo apt-get install npm -y 
+sudo apt-get install gdb -y 
 
 echo "Go to ur /etc/samba/smb.conf file and add the  following, client min protocol = NT1. Under the global section. Think this solves smbclient protocol errors. "
 
